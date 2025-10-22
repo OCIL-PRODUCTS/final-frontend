@@ -1,0 +1,211 @@
+/* Global styles */
+.container-fluid {
+  padding: 0;
+}
+
+.page-body-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.main-panel {
+  flex-grow: 1;
+  padding: 1.25rem;
+}
+
+.content-wrapper {
+  padding: 0;
+}
+
+.course-thumbnail {
+  max-height: 220px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.course-category {
+  font-size: 14px;
+}
+
+.course-info table {
+  margin-bottom: 0;
+}
+
+/* Base Styling */
+.course-thumbnail {
+  max-height: 220px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.course-category {
+  font-size: 14px;
+}
+
+.course-info {
+  text-align: left;
+  width: 100%;
+}
+
+.lesson-detail {
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 12px;
+  background: #fff;
+}
+
+.lesson-summary {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+}
+
+.lesson-info {
+  color: #6b7280;
+  margin-left: 8px;
+  font-size: 13px;
+}
+
+.lesson-toggle {
+  font-size: 13px;
+  color: #374151;
+}
+
+.lesson-content {
+  margin-top: 12px;
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 16px;
+}
+
+.lesson-left-column,
+.lesson-right-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.lesson-files, .lesson-videos, .lesson-assessments, .lesson-external, .lesson-reference {
+  margin-bottom: 16px;
+}
+
+.lesson-files h6, .lesson-videos h6, .lesson-assessments h6,
+.lesson-external h6, .lesson-reference h6 {
+  margin-bottom: 8px;
+}
+
+.lesson-files ul, .lesson-videos ul, .lesson-assessments ul,
+.lesson-external ul, .lesson-reference ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.lesson-files li, .lesson-videos li, .lesson-assessments li,
+.lesson-external li, .lesson-reference li {
+  margin-bottom: 8px;
+}
+
+.file-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 10px;
+  border-radius: 6px;
+  background: #f8fafc;
+}
+
+.file-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.file-actions .btn {
+  font-size: 12px;
+}
+
+/* Video Frame Styling */
+.video-container {
+  width: 100%;
+  position: relative;
+  padding-top: 56.25%;  /* Aspect ratio 16:9 */
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.video-frame {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.lesson-metadata {
+  margin-top: 8px;
+  font-size: 13px;
+  color: #6b7280;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .lesson-content {
+    grid-template-columns: 1fr;  /* Stack columns on mobile */
+  }
+
+  /* Ensure the video container fits properly */
+  .video-container {
+    width: 100%; /* Full width for mobile */
+    padding-top: 56.25%;  /* Maintain 16:9 aspect ratio */
+    border-radius: 6px;
+    overflow: hidden;
+  }
+
+  .video-frame {
+    width: 100%;
+    height: 100%;
+  }
+
+  /* Ensure the file actions buttons fit and are aligned vertically */
+  .file-actions {
+    flex-direction: column; /* Stack buttons vertically */
+    gap: 8px;
+  }
+
+  .file-actions .btn {
+    font-size: 10px;
+    width: 100%; /* Full width for buttons */
+  }
+
+  .file-info {
+    padding: 8px;
+    font-size: 12px;
+  }
+
+  /* Adjust lesson metadata and content margins */
+  .lesson-metadata {
+    font-size: 12px;
+  }
+
+  .lesson-left-column, .lesson-right-column {
+    margin-bottom: 16px;
+  }
+
+  .lesson-files h6, .lesson-videos h6, .lesson-assessments h6,
+  .lesson-external h6, .lesson-reference h6 {
+    font-size: 14px;
+  }
+}
+
+.footer-spacing {
+  height: 40px;
+}
+
+/* For Desktop Only */
+@media (min-width: 1025px) {
+  .main-panel {
+    margin: 50px;  /* Apply 50px margin for desktop */
+  }
+}

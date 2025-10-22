@@ -1,0 +1,124 @@
+/* src/app/signup/checkout/signupCheckout.css */
+.check-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.check-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 40px;
+  width: 400px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  margin-right: 30px;
+}
+
+.check-receipt {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 40px;
+  width: 400px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: white;
+}
+
+.check-input {
+  margin-bottom: 20px;
+}
+
+.check-cardnumber {
+  background: rgba(0, 0, 0, 0.2);
+  padding: 15px;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.check-proceed {
+  background: linear-gradient(45deg, #ff8a00, #e52e71);
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px auto 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.check-proceed:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.check-proceed:disabled {
+  background: #6c757d;
+  cursor: not-allowed;
+}
+
+.check-sendicon {
+  fill: white;
+  width: 24px;
+  height: 24px;
+}
+
+.check-cost {
+  font-size: 2rem;
+  color: #ffd700;
+  margin: 10px 0;
+}
+
+.check-bought-items {
+  font-size: 1.2rem;
+  margin: 5px 0;
+}
+
+.check-col {
+  margin-bottom: 15px;
+}
+
+.check-comprobe {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.check-payment-status {
+  color: #ff6b6b;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Responsive design */
+@media (max-width: 900px) {
+  .check-container {
+    flex-direction: column;
+  }
+  
+  .check-card,
+  .check-receipt {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+}
