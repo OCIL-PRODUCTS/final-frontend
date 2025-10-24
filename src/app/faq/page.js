@@ -1,4 +1,5 @@
 import Layout from "@/components/Layout";
+import Script from "next/script";
 
 export const metadata = {
   title: "FAQ",
@@ -9,10 +10,72 @@ export const metadata = {
     type: "website",
   },
 };
+// FAQ Schema structured data
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is OpEn?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "OpEn (Opulent Openpreneurs) is a digital platform designed to support ambitious entrepreneurs by providing AI-powered business tools, eCoaching, and resources to grow and scale their ventures."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Who is OpEn for?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "OpEn is for entrepreneurs at any stage — from ideation to scaling — who want access to technology, AI tools, mentoring and a community to accelerate business growth."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is OpEn a business school or a consultancy?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No, OpEn is not a traditional business school or consultancy. It is a platform that combines training, AI-powered tools, eCoaching and community support in a highly flexible digital format."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is Lift AI and how does it work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Lift AI is OpEn's proprietary artificial-intelligence tool designed to automate and optimise key business functions (such as marketing, operations and decision-making) to help entrepreneurs scale more efficiently."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does the membership work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Membership gives access to the platform's tools, library, coaching and community. Entrepreneurs can choose a plan suited to their growth stage, enter the platform, and start leveraging resources immediately."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I upgrade or cancel at any time?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. OpEn's membership model allows you to upgrade, downgrade or cancel at any time. You retain access for the current billing period, and changes take effect at the next cycle."
+      }
+    }
+  ]
+};
 
 export default function Home() {
   return (
     <Layout>
+     {/* FAQ Schema Markup */}
+      <Script
+        id="faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+        
       <main className="main">
         <section id="why-us" className="section why-us">
           <div className="page-title mb-5" data-aos="fade-up" data-aos-delay={100}>
