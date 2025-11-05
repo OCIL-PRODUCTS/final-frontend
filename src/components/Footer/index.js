@@ -79,6 +79,9 @@ const Footer = () => {
               <li>
                 <a href="/signup">Signup</a>
               </li>
+              <li>
+                <a href="https://youtube.com/shorts/eMAtSpOy3sY?si=_nNL6Us40sSOTNU5">How To Videos</a>
+              </li>
             </ul>
           </div>
 
