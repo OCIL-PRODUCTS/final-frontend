@@ -39,7 +39,12 @@ export default function RootLayout({ children }) {
           <ProtectedRoute>{children}
            </ProtectedRoute>
         </AuthProvider>
-       
+       {/* ✅ SendPulse Chat Widget Script */}
+        <script
+          async
+          src="https://static.sppopups.com/assets/loader.js"
+          data-chats-widget-id="3c07902e-5474-4025-9539-ec8d7719b188"
+        ></script>
       </body>
     </html>
   );
